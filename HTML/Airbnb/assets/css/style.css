@@ -111,6 +111,7 @@
     color: #fff;
     padding: 10px 16px;
     cursor: pointer;
+    scroll-snap-type: start;
 }
 
 .navbar__user {
@@ -412,6 +413,8 @@ li:last-child .user-item {
 .content-list--overflow {
     overflow: hidden;
     display: flex;
+    width: 100%;
+    scroll-snap-type: x mandatory;
 }
 
 .content-list__btn {
@@ -464,6 +467,7 @@ li:last-child .user-item {
     display: flex;
     align-items: center;
     margin-top: 16px;
+    scroll-snap-align: start;
 }
 
 .img-item {
