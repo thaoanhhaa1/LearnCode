@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --width-hoverimg: 373.33px;
+    --height-hoverimg: 280px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.hoverimg {
+    display: flex;
+    background: #2D3435;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.image {
+    position: relative;
+    width: var(--width-hoverimg);
+    height: var(--height-hoverimg);
+    overflow: hidden;
+    background-image: linear-gradient(0, #50a7ff, #fff);
+}
+
+.image img {
+    height: var(--height-hoverimg);
+    opacity: 0.8;
+    transition: opacity .2s;
+}
+
+.image:hover img {
+    opacity: 1;
+}
+
+.image-info {
+    position: absolute;
+    top: 0;
+    color: #fff;
+}
+
+.image-info h2 {
+    font-size: 35px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    transition: margin-top .2s;
+}
+
+.image-info h2 span {
+    font-weight: 500;
+}
+
+.image:hover .image-info h2 {
+    margin-top: 30px;
+}
+
+.image-info p {
+    margin-top: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .2s;
+    font-weight: 400;
+}
+
+.image:hover .image-info p {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.learn-more {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+    position: absolute;
+    bottom: -56px;
+    transition: bottom 0.2s;
+    background-color: rgba(255,255,255,0.8);
+}
+
+a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.learn-more a {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.learn-more a span {
+    font-weight: 700;
+}
+
+.image:hover .learn-more {
+    bottom: 0;
+}
+
+.container {
+    width: 100%;
+    height: 1000px;
+}

@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+#toast {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+@keyframes NotiShow {
+    from {
+        transform: translateX(calc(100% + 30px));
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes NotiHidden {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+    min-width: 400px;
+    padding: 20px 16px;
+    border-left: 5px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: all 1s ease;
+}
+
+.toast--success {
+    color: #47d764;
+}
+
+.toast--info {
+    color: #2f86eb;
+}
+
+.toast--warn {
+    color: #ffc021;
+}
+
+.toast + .toast {
+    margin-top: 30px;
+}
+
+.toast__icon {
+    font-size: 29px;
+}
+
+.toast__noti {
+    flex: 1;
+    padding: 0 16px;
+}
+
+.toast__noti h3 {
+    color: #282c36;
+    font-size: 20px;
+}
+
+.toast__noti p {
+    line-height: 1.5;
+    color: #afb0b4;
+}
+
+.toast__close {
+    font-size: 27px;
+    color: #bfc0c3;
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    color: #000;
+}
+
+.btn {    
+    min-width: 70px;
+    border-radius: 50px;
+    padding: 5px 30px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #fff;
+    transition: opacity .3s linear;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn--success {
+    background-color: #47d764;
+}
+
+.btn--info {
+    background-color: #2f86eb;
+}
+
+.btn--warn {
+    background-color: #ffc021;
+}
+
+.btn--disable {
+    opacity: 0.5 !important;
+    cursor: default;
+}

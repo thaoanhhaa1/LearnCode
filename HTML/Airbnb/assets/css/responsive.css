@@ -1,0 +1,77 @@
+@media (max-width: 1239px) {
+    .footer-origin {
+        flex-direction: column-reverse;
+    }
+    
+    .footer-origin__1 {
+        justify-content: center;
+    }
+}
+
+/* Màn hình PC tầm trung */
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .content-list__btn {
+        display: block;
+    }
+}
+
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .content-list__btn {
+        display: block;
+    }
+    
+    .navbar__place {
+        top: 97px;
+        width: 100%;
+    }
+
+    .nav-time-big {
+        margin: 0;
+    }
+
+    .nav-time {
+        width: 100%;
+    }
+
+    .navbar__place.navbar__place--scroll {
+        top: 18px;
+        left: 50%;
+        width: auto;
+    }
+
+    .content-list__title {
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+
+    .content-list__description {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 739px) {
+    .navbar {
+        display: none;
+    }
+
+    .description-item.fab {
+        display: none;
+    }
+
+    .footer-origin__1 {
+        flex-wrap: wrap;
+    }
+
+    .footer-origin__1-list + .footer-origin__1-list {
+        display: none;
+    }
+
+    .content-list--overflow {
+        overflow-x: scroll;
+    }
+
+    .content-list h2 {
+        font-size: 2rem;
+    }
+}

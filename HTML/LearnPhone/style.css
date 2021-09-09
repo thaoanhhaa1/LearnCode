@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: fixed;
+    bottom: 60px;
+    left: 60px;
+}
+
+.wapper {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle_1 {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border: 2px solid rgba(70, 196, 246,0.8);
+    border-radius: 50%;
+    animation-name: AnimationC1;
+    animation-duration: 1.2s;
+    animation-fill-mode: ease-out; 
+    animation-iteration-count: infinite;
+}
+
+.circle_2 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: rgba(70, 196, 246,0.1);
+    position: absolute;
+    animation-name: AnimationC2;
+    animation-duration: 2.3s;
+    animation-fill-mode: ease-out; 
+    animation-iteration-count: infinite;
+}
+
+.circle_3 {
+    width: 80px;
+    height: 80px;
+    background-color: #45c5f6;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle_3 i {
+    position: relative;
+    display: block;
+    height: 100%;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    animation-name: AnimationC3;
+    animation-duration: .8s;
+    animation-fill-mode: ease-out; 
+    animation-iteration-count: infinite;
+}
+
+.wapper:hover .circle_1 {
+    border: 2px solid rgba(117, 235, 80, 0.8);
+}
+
+.wapper:hover .circle_2 {
+    background-color: rgba(117, 235, 80, 0.1);
+}
+
+.wapper:hover .circle_3 {
+    background-color: rgba(117, 235, 80, 0.8);
+}
+
+.box {
+    width: 100%;
+    height: 5000px;
+    font-size: 200px;
+    text-align: center;
+}
+
+@keyframes AnimationC1 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0.1;
+    }
+}
+
+@keyframes AnimationC2 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes AnimationC3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-30deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}

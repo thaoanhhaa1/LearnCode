@@ -1,0 +1,257 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: rgb(66, 66, 66);
+    --primary-color: #ee4d2d;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --navbody-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Helvetica Neue", Helvetica, Arial, 文泉驛正黑, "WenQuanYi Zen Hei", "Hiragino Sans GB", "儷黑 Pro", "LiHei Pro", "Heiti TC", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft JhengHei", sans-serif;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.color-text {
+    color: var(--primary-color);
+}
+
+/* Animation */
+
+/* Opacity - Hiện dần */
+@keyframes OpacityShow {
+    from { 
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+@keyframes OpacityHidden {
+    to { 
+        opacity: 0;
+    }
+}
+
+/* Nở ra */
+@keyframes Growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to { 
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes Shrink {
+    to {
+        transform: scale(var(--growth-from));
+    }
+}
+
+/* Button */
+
+.btn {
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 2px;
+    min-width: 120px;
+    font-size: 1.2rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+}
+
+.btn--disabled {
+    background-color: #f9f9f9;
+    color: #cccccc !important;
+    cursor: default;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* display: none; */
+    animation: OpacityShow .3s ease;
+}
+
+.modal__body {
+    --growth-from: .5;
+    --growth-to: 1;
+    width: 500px;
+    background-color: var(--white-color);
+    margin: auto;
+    border-radius: 3px;
+    z-index: 1;
+    overflow: hidden;
+    animation: Growth .3s linear;
+}
+
+.inner__header {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px 40px;
+    color: var(--text-color);
+}
+
+.inner__header h3 {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.inner__body {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 32px;
+}
+
+.form {
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    padding: 8px;
+    outline: none;
+}
+
+.form:focus {
+    border-color: #888;
+    border-radius: 2px;
+}
+
+.rules {
+    margin: 0 5px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.rules a {
+    user-select: none;
+    display: flex;
+}
+
+.help-login {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.help-login__line {
+    border-left: 1px solid #eaeaea;
+    margin: 0 16px;
+    height: 22px;
+}
+
+.help-login__help {
+    color: #939393;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    color: rgb(54, 54, 54);
+}
+
+.btn + .btn {
+    margin-left: 8px;
+}
+
+.btn--close:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+.inner__footer {
+    padding: 12px 32px;
+    background-color: #f5f5f5;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.inner__footer > .btn {
+    padding: 0 8px;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.footer__btn--facebook {
+    background-color: #1877f2;
+    color: var(--white-color);
+}
+
+.footer__btn--google {
+    background-color: var(--white-color);
+    color: #666;
+}
+
+.footer__btn-icon {
+    font-size: 2rem;
+    margin-right: 24px;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-item {
+    margin: 0 16px;
+}
+
+.pagination-item__link {
+    color: #939393;
+    font-size: 1.8rem;
+    display: block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC: Survey Form</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <form action="" id="survey-form">
+        <header>
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description" style="font-size: 18px;">Thank you for taking the time to help us improve the platform</p>
+        </header>
+
+        <div id="form-body">
+            <div class="div-form">
+                <label for="name" id="name-label">Name</label>
+                <br>
+                <input type="text" id="name" required placeholder="Enter your name">
+            </div>
+    
+            <div class="div-form">
+                <label for="email" id="email-label">Email</label>
+                <br>
+                <input type="email" id="email" required placeholder="Enter your Email">
+            </div>
+    
+            <div class="div-form">
+                <label for="number" id="number-label">Age<span class="cule">(optional)</span></label>
+                <br>
+                <input type="number" id="number" required placeholder="Age" min=10 max=99>
+            </div>
+    
+            <div class="div-form">
+                <label for="" id="option">Which option best describes your current role?</label>
+                
+                <select id="dropdown" required placeholder="Select current role">
+                    <option selected>Select current role</option>
+                    <option>Student</option>
+                    <option>Full Time Job</option>
+                    <option>Full Time Learner</option>
+                    <option>Prefer not to say</option>
+                    <option>Other</option>
+                </select>
+            </div>
+    
+            <div class="div-form">
+                <label for="" id="number-label">Would you recommend freeCodeCamp to a friend?</label>
+                <input type="radio" name="name" value="Definitely" required checked>Definitely<br>
+                <input type="radio" name="name" value="Maybe" required>Maybe<br>
+                <input type="radio" name="name" value="NotSure" required>Not sure<br>
+            </div>
+    
+            <div class="div-form">
+                <label for="age" id="number-label">What would you like to see improved?<span class="cule">(Check all that apply)</span></label>
+                <input type="checkbox" name="" id="" value="Front-endProjects">Front-end Projects<br>
+                <input type="checkbox" name="" id="" value="Back-endProjects">Back-end Projects<br>
+                <input type="checkbox" name="" id="" value="DataVisualization">Data Visualization<br>
+                <input type="checkbox" name="" id="" value="Challenges">Challenges<br>
+                <input type="checkbox" name="" id="" value="OpenSourceCommunity">Open Source Community<br>
+                <input type="checkbox" name="" id="" value="Gitterhelprooms">Gitter help rooms<br>
+                <input type="checkbox" name="" id="" value="Videos">Videos<br>
+                <input type="checkbox" name="" id="" value="CityMeetups">City Meetups<br>
+                <input type="checkbox" name="" id="" value="Wiki">Wiki<br>
+                <input type="checkbox" name="" id="" value="Additional Courses">Additional Courses<br>
+            </div>
+    
+            <div class="div-form">
+                <p>Any comments or suggestions?</p>
+                <textarea placeholder="Enter your comment here..."></textarea>
+            </div>
+    
+            <div class="div-form">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

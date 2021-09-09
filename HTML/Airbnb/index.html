@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar-conteiner">
+            <div class="grid wide">
+                <nav class="navbar navbar--scroll">
+                    <a href="#" class="navbar__logo">
+                        <svg width="102" height="32" fill="currentcolor" style="display: block;"><path d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5zM41.54 24.12a5.02 5.02 0 01-3.95-1.83 6.55 6.55 0 01-1.6-4.48 6.96 6.96 0 011.66-4.58 5.3 5.3 0 014.08-1.86 4.3 4.3 0 013.7 1.92l.1-1.57h2.92V23.8h-2.93l-.1-1.76a4.52 4.52 0 01-3.88 2.08zm.76-2.88c.58 0 1.09-.16 1.57-.45.44-.32.8-.74 1.08-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.55.45zM53.45 8.46c0 .35-.06.67-.22.93-.16.25-.38.48-.67.64-.29.16-.6.22-.92.22-.32 0-.64-.06-.93-.22a1.84 1.84 0 01-.67-.64 1.82 1.82 0 01-.22-.93c0-.36.07-.68.22-.93.16-.3.39-.48.67-.64.29-.16.6-.23.93-.23a1.84 1.84 0 011.6.86 2 2 0 01.21.94zm-3.4 15.3V11.7h3.18v12.08h-3.19zm11.68-8.9v.04c-.15-.07-.35-.1-.5-.13-.2-.04-.36-.04-.55-.04-.89 0-1.56.26-2 .8-.48.55-.7 1.32-.7 2.31v5.93h-3.19V11.69h2.93l.1 1.83c.32-.64.7-1.12 1.24-1.48a3.1 3.1 0 011.81-.5c.23 0 .45.02.64.06.1.03.16.03.22.06v3.2zm1.28 8.9V6.74h3.18v6.5c.45-.58.96-1.03 1.6-1.38a5.02 5.02 0 016.08 1.31 6.55 6.55 0 011.6 4.49 6.96 6.96 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.1 1.57-2.92.03zm6.15-2.52c.57 0 1.08-.16 1.56-.45.44-.32.8-.74 1.08-1.25.26-.51.38-1.12.38-1.8 0-.67-.12-1.28-.38-1.79a3.75 3.75 0 00-1.08-1.25 2.95 2.95 0 00-3.12 0c-.45.32-.8.74-1.09 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.56.45zm7.51 2.53V11.69h2.93l.1 1.57a3.96 3.96 0 013.54-1.89 4.1 4.1 0 013.82 2.44c.35.76.54 1.7.54 2.75v7.24h-3.19v-6.82c0-.84-.19-1.5-.57-1.99-.38-.48-.9-.74-1.56-.74-.48 0-.9.1-1.27.32-.35.23-.64.52-.86.93a2.7 2.7 0 00-.32 1.35v6.92h-3.16zm12.52 0V6.73h3.19v6.5a4.67 4.67 0 013.73-1.89 5.02 5.02 0 013.95 1.83 6.57 6.57 0 011.59 4.48 6.95 6.95 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.09 1.57-2.93.03zm6.18-2.53c.58 0 1.09-.16 1.56-.45.45-.32.8-.74 1.09-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a3.63 3.63 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.95.45 1.55.45z"></path></svg>
+                    </a>
+            
+                    <div class="navbar__place">
+            
+                        <!-- Scroll: navbar__place--no-flexed--scroll -->
+
+                        <ul class="navbar__place--no-flexed">
+                            <!-- Page được chọn: place-item--active -->
+                
+                            <li><nav class="place-item place-item--active">Nơi ở</nav></li>
+                            <li><nav class="place-item">Trải nghiệm</nav></li>
+                            <li><a href="" class="place-item">Trải nghiệm trực tuyến</a></li>
+                        </ul>
+    
+                        <div class="navbar__place--flexed">
+                            <span>Bắt đầu tìm kiếm</span>
+                            <i class="navbar__place--flexed-icon fas fa-search"></i>
+                        </div>
+            
+
+                        <!-- Chuyển đổi 2 search big: nav-time-big--scroll -->
+                        <!-- Click search big: nav-time-big--click -->
+    
+                        <div class="nav-time-big">
+                            <ul class="nav-time nav-time--scroll">
+    
+                                <!-- nav-time-item--click -->
+    
+                                <li class="nav-time-item">
+                                    <div>
+                                        <h5>Địa điểm</h5>
+                                        <p>Bạn sắp đi đâu?</p>
+                                    </div>
+    
+                                    <div class="nav-time-item-click nav-time-item-click-1">
+                                        <h5>Mọi lúc, mọi nơi</h5>
+                                        <a href="">
+                                            <h4>Tìm kiếm linh hoạt</h4>
+                                            <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+                                            <lord-icon
+                                                src="https://cdn.lordicon.com/msoeawqm.json"
+                                                trigger="hover"
+                                                colors="primary:#121331,secondary:#6F019C"
+                                                style="width:30px;height:30px">
+                                            </lord-icon>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="nav-time-item">
+                                    <div>
+                                        <h5>Nhận phòng</h5>
+                                        <p>Thêm ngày</p>
+                                    </div>
+    
+                                    <div class="nav-time-item-click nav-time-item-click-2">
+                                        <div class="nav-time-item--click-2__heading">
+                                            <h5 class="nav-time-item--click-2__heading--active">Lịch</h5>
+                                            <h5>Ngày linh hoạt</h5>
+                                        </div>
+                                        <div class="nav-time-item--click-2__body">
+                                            <div class="mount mount--present">
+                                                <i class="mount-icon mount-icon--left fas fa-chevron-left"></i>
+                                                <h5 class="mount-header">tháng 9 năm 2021</h5>
+                                                <ul class="mount-date mount-date--name">
+                                                    <li>T2</li>
+                                                    <li>T3</li>
+                                                    <li>T4</li>
+                                                    <li>T5</li>
+                                                    <li>T6</li>
+                                                    <li>T7</li>
+                                                    <li>CN</li>
+                                                </ul>
+    
+                                                <ul class="mount-date mount-date--num">
+    
+                                                    <!-- Click: mount-date--click -->
+    
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable">1</li>
+                                                    <li class="mount-date--disable">2</li>
+                                                    <li class="mount-date--disable">3</li>
+                                                    <li class="mount-date-item">4</li>
+                                                    <li class="mount-date-item">5</li>
+                                                    <li class="mount-date-item">6</li>
+                                                    <li class="mount-date-item">7</li>
+                                                    <li class="mount-date-item">8</li>
+                                                    <li class="mount-date-item">9</li>
+                                                    <li class="mount-date-item">10</li>
+                                                    <li class="mount-date-item">11</li>
+                                                    <li class="mount-date-item">12</li>
+                                                    <li class="mount-date-item">13</li>
+                                                    <li class="mount-date-item">14</li>
+                                                    <li class="mount-date-item">15</li>
+                                                    <li class="mount-date-item">16</li>
+                                                    <li class="mount-date-item">17</li>
+                                                    <li class="mount-date-item">18</li>
+                                                    <li class="mount-date-item">19</li>
+                                                    <li class="mount-date-item">20</li>
+                                                    <li class="mount-date-item">21</li>
+                                                    <li class="mount-date-item">22</li>
+                                                    <li class="mount-date-item">23</li>
+                                                    <li class="mount-date-item">24</li>
+                                                    <li class="mount-date-item">25</li>
+                                                    <li class="mount-date-item">26</li>
+                                                    <li class="mount-date-item">27</li>
+                                                    <li class="mount-date-item">28</li>
+                                                    <li class="mount-date-item">29</li>
+                                                    <li class="mount-date-item">30</li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mount mount--next">
+                                                <h5 class="mount-header">tháng 10 năm 2021</h5>
+                                                <i class="mount-icon mount-icon--right fas fa-chevron-right"></i>
+                                                <ul class="mount-date mount-date--name">
+                                                    <li>T2</li>
+                                                    <li>T3</li>
+                                                    <li>T4</li>
+                                                    <li>T5</li>
+                                                    <li>T6</li>
+                                                    <li>T7</li>
+                                                    <li>CN</li>
+                                                </ul>
+    
+                                                <ul class="mount-date mount-date--num">
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                    <li>7</li>
+                                                    <li>8</li>
+                                                    <li>9</li>
+                                                    <li>10</li>
+                                                    <li>11</li>
+                                                    <li>12</li>
+                                                    <li>13</li>
+                                                    <li>14</li>
+                                                    <li>15</li>
+                                                    <li>16</li>
+                                                    <li>17</li>
+                                                    <li>18</li>
+                                                    <li>19</li>
+                                                    <li>20</li>
+                                                    <li>21</li>
+                                                    <li>22</li>
+                                                    <li>23</li>
+                                                    <li>24</li>
+                                                    <li>25</li>
+                                                    <li>26</li>
+                                                    <li>27</li>
+                                                    <li>28</li>
+                                                    <li>29</li>
+                                                    <li>30</li>
+                                                    <li>31</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-time-item">
+                                    <div>
+                                        <h5>Trả phòng</h5>
+                                        <p>Thêm ngày</p>
+                                    </div>
+    
+                                    <div class="nav-time-item-click nav-time-item-click-2 h2">
+                                        <div class="nav-time-item--click-2__heading">
+                                            <h5 class="nav-time-item--click-2__heading--active">Lịch</h5>
+                                            <h5>Ngày linh hoạt</h5>
+                                        </div>
+                                        <div class="nav-time-item--click-2__body">
+                                            <div class="mount mount--present">
+                                                <i class="mount-icon mount-icon--left fas fa-chevron-left"></i>
+                                                <h5 class="mount-header">tháng 9 năm 2021</h5>
+                                                <ul class="mount-date mount-date--name">
+                                                    <li>T2</li>
+                                                    <li>T3</li>
+                                                    <li>T4</li>
+                                                    <li>T5</li>
+                                                    <li>T6</li>
+                                                    <li>T7</li>
+                                                    <li>CN</li>
+                                                </ul>
+    
+                                                <ul class="mount-date mount-date--num">
+    
+                                                    <!-- Click: mount-date--click -->
+    
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable">1</li>
+                                                    <li class="mount-date--disable">2</li>
+                                                    <li class="mount-date--disable">3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                    <li>7</li>
+                                                    <li>8</li>
+                                                    <li>9</li>
+                                                    <li>10</li>
+                                                    <li>11</li>
+                                                    <li>12</li>
+                                                    <li>13</li>
+                                                    <li>14</li>
+                                                    <li>15</li>
+                                                    <li>16</li>
+                                                    <li>17</li>
+                                                    <li>18</li>
+                                                    <li>19</li>
+                                                    <li>20</li>
+                                                    <li>21</li>
+                                                    <li>22</li>
+                                                    <li>23</li>
+                                                    <li>24</li>
+                                                    <li>25</li>
+                                                    <li>26</li>
+                                                    <li>27</li>
+                                                    <li>28</li>
+                                                    <li>29</li>
+                                                    <li>30</li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mount mount--next">
+                                                <h5 class="mount-header">tháng 10 năm 2021</h5>
+                                                <i class="mount-icon mount-icon--right fas fa-chevron-right"></i>
+                                                <ul class="mount-date mount-date--name">
+                                                    <li>T2</li>
+                                                    <li>T3</li>
+                                                    <li>T4</li>
+                                                    <li>T5</li>
+                                                    <li>T6</li>
+                                                    <li>T7</li>
+                                                    <li>CN</li>
+                                                </ul>
+    
+                                                <ul class="mount-date mount-date--num">
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                    <li>7</li>
+                                                    <li>8</li>
+                                                    <li>9</li>
+                                                    <li>10</li>
+                                                    <li>11</li>
+                                                    <li>12</li>
+                                                    <li>13</li>
+                                                    <li>14</li>
+                                                    <li>15</li>
+                                                    <li>16</li>
+                                                    <li>17</li>
+                                                    <li>18</li>
+                                                    <li>19</li>
+                                                    <li>20</li>
+                                                    <li>21</li>
+                                                    <li>22</li>
+                                                    <li>23</li>
+                                                    <li>24</li>
+                                                    <li>25</li>
+                                                    <li>26</li>
+                                                    <li>27</li>
+                                                    <li>28</li>
+                                                    <li>29</li>
+                                                    <li>30</li>
+                                                    <li>31</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-time-item">
+                                    <div>
+                                        <h5>Khách</h5>
+                                        <p>Thêm khách</p>
+                                    </div>
+                                    <i class="nav-time-search fas fa-search">
+                                        <span>Tìm kiếm</span>
+                                    </i>
+    
+                                    <ul class="nav-time-item-click nav-time-item-click-3">
+                                        <li class="nav-time-item--click-3__item">
+                                            <div class="nav-time-item--click-3__item-info">
+                                                <h5>Người lớn</h5>
+                                                <p>Từ 13 tuổi trở lên</p>
+                                            </div>
+    
+                                            <!-- sub-number--disable -->
+    
+                                            <lord-icon class="sub-number sub-number--disable"
+                                                src="https://cdn.lordicon.com/rivoakkk.json"
+                                                trigger="hover"
+                                                colors="primary:#121331,secondary:#08a88a"
+                                                style="width:32px;height:32px">
+                                            </lord-icon>
+                                            <!-- <i class="fas fa-minus-circle"></i> -->
+                                            <input type="number" id="number-people" value=0>
+                                            <!-- <i class="fas fa-plus-circle"></i> -->
+                                            <lord-icon class="add-number"
+                                                src="https://cdn.lordicon.com/mecwbjnp.json"
+                                                trigger="hover"
+                                                colors="primary:#121331,secondary:#08a88a"
+                                                style="width:32px;height:32px">
+                                            </lord-icon>
+                                        </li>
+                                        <li class="nav-time-item--click-3__item">
+                                            <div class="nav-time-item--click-3__item-info">
+                                                <h5>Trẻ em</h5>
+                                                <p>Độ tuổi 2 - 12</p>
+                                            </div>
+                                            <lord-icon class="sub-number sub-number--disable"
+                                                src="https://cdn.lordicon.com/rivoakkk.json"
+                                                trigger="hover"
+                                                colors="primary:#121331,secondary:#08a88a"
+                                                style="width:32px;height:32px">
+                                            </lord-icon>
+                                            <!-- <i class="fas fa-minus-circle"></i> -->
+                                            <input type="number" id="number-people" value=0>
+                                            <!-- <i class="fas fa-plus-circle"></i> -->
+                                            <lord-icon class="add-number"
+                                                src="https://cdn.lordicon.com/mecwbjnp.json"
+                                                trigger="hover"
+                                                colors="primary:#121331,secondary:#08a88a"
+                                                style="width:32px;height:32px">
+                                            </lord-icon>
+                                        </li>
+                                        <li class="nav-time-item--click-3__item">
+                                            <div class="nav-time-item--click-3__item-info">
+                                                <h5>Em bé</h5>
+                                                <p>Dưới 2 tuổi</p>
+                                            </div>
+                                            <lord-icon class="sub-number sub-number--disable"
+                                                src="https://cdn.lordicon.com/rivoakkk.json"
+                                                trigger="hover"
+                                                colors="primary:#121331,secondary:#08a88a"
+                                                style="width:32px;height:32px">
+                                            </lord-icon>
+                                            <!-- <i class="fas fa-minus-circle"></i> -->
+                                            <input type="number" id="number-people" value=0>
+                                            <!-- <i class="fas fa-plus-circle"></i> -->
+                                            <lord-icon class="add-number"
+                                                src="https://cdn.lordicon.com/mecwbjnp.json"
+                                                trigger="hover"
+                                                colors="primary:#121331,secondary:#08a88a"
+                                                style="width:32px;height:32px">
+                                            </lord-icon>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+    
+                            <ul class="nav-time nav-time--2 nav-time--scroll">
+                                <li class="nav-time-item">
+                                    <div>
+                                        <h5>Địa điểm</h5>
+                                        <p>Bạn sắp đi đâu?</p>
+                                    </div>
+    
+                                    <div class="nav-time-item-click nav-time-item-click-4">
+                                        <div class="nav-time-item-click-4--img">
+                                            <img src="./assets/img/lancan.png" alt="">
+                                            <span>Lân cận</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-time-item">
+                                    <div>
+                                        <h5>Ngày</h5>
+                                        <p>Thêm địa điểm bạn muốn tham gia</p>
+                                    </div>
+                                    <i class="nav-time-search fas fa-search">
+                                        <span>Tìm kiếm</span>
+                                    </i>
+    
+                                    <div class="nav-time-item-click nav-time-item-click-2 h3">
+                                        <div class="nav-time-item--click-2__body">
+                                            <div class="mount mount--present">
+                                                <i class="mount-icon mount-icon--left fas fa-chevron-left"></i>
+                                                <h5 class="mount-header">tháng 9 năm 2021</h5>
+                                                <ul class="mount-date mount-date--name">
+                                                    <li>T2</li>
+                                                    <li>T3</li>
+                                                    <li>T4</li>
+                                                    <li>T5</li>
+                                                    <li>T6</li>
+                                                    <li>T7</li>
+                                                    <li>CN</li>
+                                                </ul>
+    
+                                                <ul class="mount-date mount-date--num">
+    
+                                                    <!-- Click: mount-date--click -->
+    
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable">1</li>
+                                                    <li class="mount-date--disable">2</li>
+                                                    <li class="mount-date--disable">3</li>
+                                                    <li class="mount-date-item">4</li>
+                                                    <li class="mount-date-item">5</li>
+                                                    <li class="mount-date-item">6</li>
+                                                    <li class="mount-date-item">7</li>
+                                                    <li class="mount-date-item">8</li>
+                                                    <li class="mount-date-item">9</li>
+                                                    <li class="mount-date-item">10</li>
+                                                    <li class="mount-date-item">11</li>
+                                                    <li class="mount-date-item">12</li>
+                                                    <li class="mount-date-item">13</li>
+                                                    <li class="mount-date-item">14</li>
+                                                    <li class="mount-date-item">15</li>
+                                                    <li class="mount-date-item">16</li>
+                                                    <li class="mount-date-item">17</li>
+                                                    <li class="mount-date-item">18</li>
+                                                    <li class="mount-date-item">19</li>
+                                                    <li class="mount-date-item">20</li>
+                                                    <li class="mount-date-item">21</li>
+                                                    <li class="mount-date-item">22</li>
+                                                    <li class="mount-date-item">23</li>
+                                                    <li class="mount-date-item">24</li>
+                                                    <li class="mount-date-item">25</li>
+                                                    <li class="mount-date-item">26</li>
+                                                    <li class="mount-date-item">27</li>
+                                                    <li class="mount-date-item">28</li>
+                                                    <li class="mount-date-item">29</li>
+                                                    <li class="mount-date-item">30</li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mount mount--next">
+                                                <h5 class="mount-header">tháng 10 năm 2021</h5>
+                                                <i class="mount-icon mount-icon--right fas fa-chevron-right"></i>
+                                                <ul class="mount-date mount-date--name">
+                                                    <li>T2</li>
+                                                    <li>T3</li>
+                                                    <li>T4</li>
+                                                    <li>T5</li>
+                                                    <li>T6</li>
+                                                    <li>T7</li>
+                                                    <li>CN</li>
+                                                </ul>
+    
+                                                <ul class="mount-date mount-date--num">
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li class="mount-date--disable"></li>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                    <li>7</li>
+                                                    <li>8</li>
+                                                    <li>9</li>
+                                                    <li>10</li>
+                                                    <li>11</li>
+                                                    <li>12</li>
+                                                    <li>13</li>
+                                                    <li>14</li>
+                                                    <li>15</li>
+                                                    <li>16</li>
+                                                    <li>17</li>
+                                                    <li>18</li>
+                                                    <li>19</li>
+                                                    <li>20</li>
+                                                    <li>21</li>
+                                                    <li>22</li>
+                                                    <li>23</li>
+                                                    <li>24</li>
+                                                    <li>25</li>
+                                                    <li>26</li>
+                                                    <li>27</li>
+                                                    <li>28</li>
+                                                    <li>29</li>
+                                                    <li>30</li>
+                                                    <li>31</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <ul class="navbar__user">
+                        <li>
+                            <a href="" class="user-item">Trở thành chủ nhà</a>
+                        </li>
+                        <li>
+                            <nav class="user-item">
+                                <i class="fas fa-globe"></i>
+                            </nav>
+                        </li>
+                        <li>
+                            <nav class="user-item user-item--menu">
+                                <i class="user-item__icon fas fa-bars"></i>
+                                <i class="user-item__icon fas fa-user-circle"></i>
+    
+                                <!-- User Menu -->
+    
+                                <div class="user-item__menu">
+                                    <ul class="menu-list">
+                                        <li><a href="" class="menu-item menu-item--login">Đăng ký</a></li>
+                                        <li><a href="" class="menu-item">Đăng nhập</a></li>
+                                    </ul>
+                                    <ul class="menu-list">
+                                        <li><a href="" class="menu-item">Cho thuê nhà</a></li>
+                                        <li><a href="" class="menu-item">Tổ chức trải nghiệm</a></li>
+                                        <li><a href="" class="menu-item">Trợ giúp</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="grid wide">
+                
+                <div class="header-body">
+                    <h6>Bạn chưa biết nên đi đâu? Tuyệt!</h6>
+                    <a href="" class="header-body__search"><h5>Tìm kiếm linh hoạt</h5></a>
+                </div>
+            </div>
+        </header>
+    
+        <div class="contents">
+            <div class="grid wide">
+                <div class="content-list">
+                    <h2>Khám phá những điểm đến gần đây</h2>
+                    <div class="row">
+                        <div class="content-list--overflow">
+                            <a href="" class="content-item col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content1.jpg" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Ho Chi Minh City</h6>
+                                    <p class="item-time">8,5 giờ lái xe</p>
+                                </div>
+                            </a>
+                            <a href="" class="content-item col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content2.jpg" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Nha Trang</h6>
+                                    <p class="item-time">3 giờ lái xe</p>
+                                </div>
+                            </a>
+                            <a href="" class="content-item col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content3.jpg" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Hội An</h6>
+                                    <p class="item-time">4 giờ lái xe</p>
+                                </div>
+                            </a>
+                            <a href="" class="content-item col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content5.png" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Vung Tau City</h6>
+                                    <p class="item-time">9 giờ lái xe</p>
+                                </div>
+                            </a>
+                            <a href="" class="content-item col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content6.png" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Tuy Hòa</h6>
+                                    <p class="item-time">1,5 giờ lái xe</p>
+                                </div>
+                            </a>
+                            <a href="" class="content-item col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content7.jpg" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Bien Hoa City</h6>
+                                    <p class="item-time">8,5 giờ lái xe</p>
+                                </div>
+                            </a>
+                            <a href="" class="content-item col tv-3 pc-0 tl-0">
+                                <img src="./assets/img/content8.png" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Thuan Hoa Town</h6>
+                                    <p class="item-time">8,5 giờ lái xe</p>
+                                </div>
+                            </a>
+                            <a href="" class="content-item col tv-3 pc-0 tl-0">
+                                <img src="./assets/img/content9.jpg" alt="" class="img-item">
+                                <div class="item-info">
+                                    <h6 class="item-name">Phan Rang-Tháp Chàm</h6>
+                                    <p class="item-time">4 giờ lái xe</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-list">
+                    <h2>Ở bất cứ đâu</h2>
+
+                    <input type="checkbox" name="" id="content-list__btn" hidden>
+
+                    <div class="row content--overflow">
+                        <div class="content-list--overflow">
+                            <a href="" class="item-place col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content10.jpg" alt="" class="place-img">
+                                <h6>Nơi nghỉ dưỡng ngoài trời</h6>
+                            </a>
+                            <a href="" class="item-place col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content11.jpg" alt="" class="place-img">
+                                <h6>Chỗ ở độc đáo</h6>
+                            </a>
+                            <a href="" class="item-place col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content12.jpg" alt="" class="place-img">
+                                <h6>Toàn bộ nhà</h6>
+                            </a>
+                            <a href="" class="item-place col tv-3 pc-4 tl-4 mb-10">
+                                <img src="./assets/img/content13.jpg" alt="" class="place-img">
+                                <h6>Cho phép mang theo thú cưng</h6>
+                            </a>
+                        </div>
+
+                        <label for="content-list__btn" class="content-list__btn">
+                            <i class="content-list__btn-left fas fa-angle-left"></i>
+                            <i class="content-list__btn-right fas fa-angle-right"></i>
+                        </label>
+                    </div>
+                </div>
+    
+                <a href="" class="content-list">
+                    <img src="./assets/img/content14.jpg" alt="" class="place-img">
+                    <div class="content-list__info">
+                        <h1 class="content-list__title">Thử đón tiếp khách</h1>
+                        <p class="content-list__description">Kiếm thêm thu nhập và khám phá các cơ hội mới bằng cách chia sẻ nơi ở của bạn.</p>
+                        <h6 class="content-list__more">Tìm hiểu thêm</h6>
+                    </div>
+                </a>
+    
+                <div class="content-list">
+                    <h2>Khám phá những điều nên trải nghiệm</h2>
+                    <div class="row">
+                        <div class="content-list--overflow">
+                            <a href="" class="col tv-4 pc-4 tl-4 mb-9">
+                                <div class="content-footer">
+                                    <img src="./assets/img/content15.jpg" alt="" class="content-footer__img">
+                                    <h6 class="content-footer__name">Trải nghiệm</h6>
+                                    <p class="content-footer__description">Tìm các hoạt động khó quên gần bạn.</p>
+                                </div>
+                            </a>
+        
+                            <a href="" class="col tv-4 pc-4 tl-4 mb-9">
+                                <div class="content-footer">
+                                    <img src="./assets/img/16.jpg" alt="" class="content-footer__img">
+                                    <h6 class="content-footer__name">Trải nghiệm trực tuyến</h6>
+                                    <p class="content-footer__description">Các hoạt động tương tác, truyền trực tiếp dưới sự dẫn dắt của Người tổ chức.</p>
+                                </div>
+                            </a>
+        
+                            <a href="" class="col tv-4 pc-4 tl-4 mb-9">
+                                <div class="content-footer">
+                                    <img src="./assets/img/17.jpg" alt="" class="content-footer__img">
+                                    <h6 class="content-footer__name">Vận động viên Olympic và vận động viên Paralympic</h6>
+                                    <p class="content-footer__description">Các hoạt động trực tuyến do vận động viên tổ chức</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col tv-3 pc-12 border-bottom">
+                        <div class="footer-item">
+                            <h6 class="footer-item__name">GIỚI THIỆU</h6>
+
+                            <div class="grid">
+                                <ul class="footer-item__description row">
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Phương thức hoạt động của Airbnb</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Trang tin tức</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Airbnb 2021</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Nhà đầu tư</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Airbnb Plus</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Airbnb Luxe</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">HotelTonight</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Airbnb for Work</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Nhờ có Host, mọi điều đều có thể</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Cơ hội nghề nghiệp</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Thư của nhà sáng lập</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col tv-3 pc-12 border-bottom">
+                        <div class="footer-item">
+                            <h6 class="footer-item__name">CỘNG ĐỒNG</h6>
+
+                            <div class="grid">
+                                <ul class="footer-item__description row">
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Sự đa dạng và Cảm giác thân thuộc</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Tiện nghi phù hợp cho người khuyết tật</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Đối tác liên kết Airbnb</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Đón tiếp người tị nạn Afghanistan</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Lượt giới thiệu của khách</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Airbnb.org</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col tv-3 pc-12 border-bottom">
+                        <div class="footer-item">
+                            <h6 class="footer-item__name">ĐÓN TIẾP KHÁCH</h6>
+
+                            <div class="grid">
+                                <ul class="footer-item__description row">
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Cho thuê nhà</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Tổ chức Trải nghiệm trực tuyến</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Tổ chức trải nghiệm</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Đón tiếp khách có trách nhiệm</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Trung tâm tài nguyên</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Trung tâm cộng đồng</a></li>
+                                </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col tv-3 pc-12 border-bottom">
+                        <div class="footer-item">
+                            <h6 class="footer-item__name">HỖ TRỢ</h6>
+
+                            <div class="grid">
+                                <ul class="footer-item__description row">
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Biện pháp ứng phó với đại dịch COVID-19 của chúng tôi</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Trung tâm trợ giúp</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Các tùy chọn hủy</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Hỗ trợ khu dân cư</a></li>
+                                    <li class="col tv-12 pc-4 tl-4 mb-12"><a href="" class="description-item">Tin cậy và an toàn</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-origin">
+                    <ul class="footer-origin__1">
+                        <li><p>© 2021 Airbnb, Inc.</p></li>
+                        <li class="footer-origin__1-line">·</li>
+                        <li><a href="" class="description-item">Quyền riêng tư</a></li>
+                        <li class="footer-origin__1-line">·</li>
+                        <li><a href="" class="description-item">Điều khoản</a></li>
+                        <li class="footer-origin__1-line">·</li>
+                        <li><a href="" class="description-item">Sơ đồ trang web</a></li>
+                    </ul>
+
+                    <div class="footer-origin__1">
+                        <ul class="footer-origin__1-list">
+                            <li class="description-item">
+                                <i class="description-icon fas fa-globe"></i>
+                                <span class="description-item--text">Tiếng Việt</span>
+                            </li>
+                            <li class="description-item">
+                                <i class="description-icon fas fa-dollar-sign"></i>
+                                <span class="description-item--text">USD</span>
+                            </li>
+                        </ul>
+                        <ul class="footer-origin__1-list">
+                            <li>
+                                <a href=""><i class="description-item fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="description-item fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="description-item fab fa-instagram-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top -->
+
+    <div class="backtotop">
+        <div class="border">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <script src="./assets/javascript/main.js">
+    </script>
+</body>
+</html>

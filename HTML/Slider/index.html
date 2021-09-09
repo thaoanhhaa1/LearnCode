@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="img-slider">
+        <div class="slider">
+            <input onclick="counter = 1" type="radio" name="btn" id="btn1">
+            <input onclick="counter = 2" type="radio" name="btn" id="btn2">
+            <input onclick="counter = 3" type="radio" name="btn" id="btn3">
+            <input onclick="counter = 4" type="radio" name="btn" id="btn4">
+    
+            <div class="slides">
+    
+                <div class="slides__img">
+                    <img src="./1597070950_Hinh-nen-may-tinh-desktop-dep-moi-nhat-2020-full-HD.jpg" alt="" class="slider__img-img img1">
+                </div>
+                <div class="slides__img">
+                    <img src="./2f880ef2e1761ec234bf68cba9e7f3bb.jpg" alt="" class="slider__img-img img1">
+                </div>
+                <div class="slides__img">
+                    <img src="./hinh-anh-mua-thu-dep-nhat-41.jpg" alt="" class="slider__img-img img1">
+                </div>
+                <div class="slides__img">
+                    <img src="./hinh-anh-nen-may-tinh-dep-nhat_092409363.jpg" alt="" class="slider__img-img img1">
+                </div>
+
+            </div>
+            <div class="btn">
+                <label for="btn1" class="btn__radio btn__radio-1"></label>
+                <label for="btn2" class="btn__radio btn__radio-2"></label>
+                <label for="btn3" class="btn__radio btn__radio-3"></label>
+                <label for="btn4" class="btn__radio btn__radio-4"></label>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="container"></div>
+
+    <script>
+        var counter = 1;
+        document.getElementById("btn" + counter).checked = true;
+        setInterval(function() {
+            document.getElementById("btn" + counter).checked = true;
+            counter++;
+            if (counter > 4)
+                counter = 1;
+        },5000);
+    </script>
+
+</body>
+</html>

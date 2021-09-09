@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Lato, sans-serif;
+}
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#nav > li {
+    position: relative;
+    display: inline-block;
+}
+
+#nav .navsub {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.7);
+}
+
+#nav > li > a {
+    color: #fff;
+    line-height: 46.4px;
+    padding: 0 24px;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none; 
+    display: block;
+    font-size: 15px;
+}
+
+#nav .navsub li:hover,
+#nav > li:hover > a {
+    background-color: #ddd;
+    color: #000;
+}
+
+#nav li:hover .navsub {
+    display: block;
+}
+
+#nav .navsub a {
+    padding: 8px 16px;
+    min-width: 160px;
+    height: 38px;
+    color: #000;
+}
+
+#nav .ti-angle-down {
+    /* position: absolute; */
+    display: inline-block;
+    font-size: 11px;
+}
+
+#nav .search {
+    /* display: inline-block; */
+    color: #fff;
+    /* right: 0; */
+    float: right;
+    line-height: 46px;
+    padding: 0 24px;
+    font-size: 15px;
+    /* Đổi hình con trỏ chuột */
+    cursor: pointer;
+}
+
+#nav .search:hover {
+    background-color: #f44336!important;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/w3bandtest/assets/img/chicago.jpg) no-repeat top center / cover;
+    position: relative;
+}
+
+#slider .text-center {
+    color: #fff;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-header {
+    padding-bottom: 25px;
+    font-size: 24px;
+    /* Thiết lập chữ tô đậm */
+    font-weight: normal;
+}
+
+#slider .text-discription {
+    font-size: 15px;
+}
+
+#content {
+    background-color: #fff;
+    height: 1000px;
+}
+
+#footer {
+
+}

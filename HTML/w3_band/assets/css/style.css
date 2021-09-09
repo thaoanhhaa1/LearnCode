@@ -1,0 +1,480 @@
+/* Reset CSS */
+* {
+    /* Emmet */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Chữ không chân, kế thừa */
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+/* 
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng
+ */
+
+.clear {
+    clear: both;
+}
+
+#header {
+    height: 46px;
+    width: 100%;
+    background-color: #000;
+    top: 0;
+    position: fixed;
+    /* Trục độ sâu */
+    z-index: 1;
+}
+
+#nev .search {
+    float: right;
+    background-color: none;  
+    line-height: 46px;
+    color: #fff;
+    padding: 0 24px;
+    /* Thay đổi hình dạng con trỏ chuột */
+    cursor: pointer;
+}
+
+#nev .search:hover {
+    background-color: red;
+}
+
+#nev > li{
+    display: inline-block;
+    position: relative;
+    margin-right: -3px;
+}
+
+#nev > li > a {  
+    /* Chiều cao cho chữ */
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.nav-head > a, ul li a {
+    /* Bỏ gạch chân thẻ a */
+    text-decoration: none;
+    padding: 0 24px;
+    display: block; 
+    color: #fff;
+}
+
+#nev .subnav a {
+    color: #000; 
+    padding-left: 12px;
+}
+
+#nev-mb {
+    display: none;
+}
+
+.nav-head > a, #nev-mb li a {
+    text-transform: uppercase;
+    padding: 12px 24px;
+}
+
+.nav-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu.ti {
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 22px;
+}
+
+.list_mb {
+    background-color: #000;
+    display: none;
+    box-shadow: 0 0 10px #000;
+}
+
+.hover:hover, .modal .close:hover, .modal .body .buy:hover, .modal .body .close-box:hover,
+#content .list-place .buy:hover, .body-contact .send:hover,
+#nev .subnav li:hover a, #nev > li:hover > a {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+#nev li:hover .subnav {
+    display: block;  
+}
+
+#nev .subnav{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style-type: none;
+    line-height: 38px;  
+    min-width: 160px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    /* 50% chiều ngang của chính nó */
+    padding-top: 50%;
+    /* Đổ nền ảnh tính từ padding */
+    background: url(/w3_band/assets/img/chicago.jpg) no-repeat top center / cover;
+}
+
+#slider .text-content {
+    width: 100%;
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    /* Căn giữa */
+    text-align: center;
+}
+
+#slider .text-header {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#content .section-about {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+    max-width:800px;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 400;
+    /* Khoảng cách giữa các chữ */
+    letter-spacing: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    margin: 15px 0;
+    /* Độ đậm nhạt của chữ */
+    opacity: 0.6;
+    font-style: italic;
+}
+
+#content .about-text {
+    margin: 15px 0;
+    text-align: justify;
+}
+
+#content .member {
+    float: left;
+    text-align: center;
+    width: 33.33333%;
+}
+
+#content .member p {
+    margin: 15px 0;
+}
+
+#content .member .img {
+    margin-bottom: 16px;
+    width: 60%;
+    border-radius: 4px;
+}
+
+#content .s2 {
+    width: 100%;
+    color: #fff;
+}
+
+.tour-section {
+    background-color: #000 !important;
+}
+
+#content .tour-member {
+    background-color: #fff;
+    padding: 8px 16px;
+    color: #757575;
+    list-style-type: none;
+    border: 1px solid #ddd;
+}
+
+#content .status {
+    background-color: #f44336;
+    color: #fff;
+    margin-left: 16px;
+    padding: 0 8px;
+    line-height: 22.4px;
+    display: inline-block;
+}
+
+#content .number-tickets {
+    margin-right: 16px;
+    background-color: #000;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 50%;
+    float: right;
+}
+
+#content .list-place {
+    margin: 0 -16px;
+    padding: 32px 8px;
+}
+
+#content .list-place .member-place {
+    width: 33.333%;
+    float: left;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    background-color: #fff;
+    background-clip: content-box;
+}
+
+#content .list-place .content {
+    color: #000;
+    padding: 0.15px 16px;
+    /* margin-top: -6px; */
+}
+
+#content .list-place .img {
+    width: 100%;
+    /* Bỏ khoảng thừa của thẻ img*/
+    vertical-align: middle; 
+    filter: grayscale(34%);
+}
+
+#content .list-place .img:hover {
+    opacity: 0.6;
+}
+
+#content .list-place .name {
+    margin: 15px 0;
+}
+
+#content .list-place .date {
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+#content .list-place .buy {
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-family: Lato;
+    line-height: 22.4px;
+}
+
+#content .body-contact {
+    font-size: 18px;
+    padding: 32px 0;
+}
+
+#content .content {
+    display: inline-block;
+}
+
+#content .ti-mobile, #content .ti-email, #content .ti-location-pin {
+    width: 30px;
+}
+
+.body-contact .contact {
+    float: left;
+    width: 50%;
+}
+
+.body-contact .haft {
+    padding: 0 8px;
+    float: left;
+    width: 50%;
+}
+
+.body-contact .full {
+    padding: 0 8px;
+}
+
+.body-contact .haft .box-contact {
+    width: 100%;
+}
+
+.modal .body .message, .body-contact .box-contact {
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+}
+
+.body-contact .send {
+    font-size: 15px;
+    margin: 16px 8px 16px 0;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    display: block;
+    float: right;
+    border: none;
+}
+
+.map {
+    width: 100%;
+    vertical-align: middle; 
+    filter: grayscale(28%);
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+#footer .ti:hover {
+    opacity: 0.6;
+}
+
+.modal {
+    position: fixed !important;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    /* display: flex; */
+    display:none;
+}
+
+.open {
+    display:block !important;
+}
+
+.modal .modals {
+    height: 100%;
+    margin-left: 12%;
+    margin-right: 12%;
+    animation: ModalACT ease .5s;
+    padding-top: 50px;
+    overflow-y: auto;
+}
+
+.modal .header {
+    background-color: #009688;
+    padding: 32px 16px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.modal h2 {
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.modal .close {
+    position: absolute;
+    font-size: 24px;
+    padding: 8px 16px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.modal .body {
+    background-color: #fff;
+    padding: 0.15px 16px;
+}
+
+.modal .body .name {
+    margin: 15px 0 7px;
+}
+
+.modal .body .buy {
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    border: 0;
+}
+
+.modal .body .close-box {
+    padding: 8px 16px;
+    margin: 16px 0;
+    float: left;
+    background-color: #F44336;
+    color: #fff;
+}
+
+.modal .body .help {
+    float: right;
+    margin: 15px 0;
+}
+
+@keyframes ModalACT {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 600px) {
+    #slider .text-content {
+        display: none;
+    }
+
+    #content .member {
+        width: 100%;
+    }
+
+    #content .list-place .member-place {
+        width: 100%;
+    }
+
+    .body-contact .contact {
+        width: 100%;
+    }
+
+    .modal .modals {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    #nev {
+        display: none;
+    }
+
+    #nev-mb {
+        display: block;
+    }
+
+    .body-contact .haft {
+        width: 100%;
+        padding: 0;
+    }
+
+    .body-contact .full {
+        padding: 0;
+    }
+}

@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #f3f3f3;
+    line-height: 1.4;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+#title, #description {
+    text-align: center;
+}
+
+#survey-form {
+    font-size: 18px;    /* text-align: center; */
+    display: block;
+    margin: 50px 136.8px;
+}
+
+#form-body {
+    padding: 40px;
+    background: rgba(27, 27, 50, 0.8);
+    border-radius: 5px;
+}
+
+#survey-form .div-form {
+    margin-bottom: 20px;
+    padding: 4px;
+}
+
+#option, #survey-form #name-label, #survey-form #email-label, #survey-form #number-label, #div-form p {
+    margin-bottom: 8px;
+    float: left;
+}
+
+#option::after , #survey-form #name-label::after , #survey-form #email-label::after , #survey-form #number-label::after {
+    clear: both;
+}
+
+#name, #email, #number, #dropdown {
+    border: 1px solid #ced4da;
+    padding: 6px 12px;
+    border-radius: 2px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.div-form label {
+    width: 100%;
+}
+
+[type="checkbox"], [type="radio"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.div-form p {
+    margin-bottom: 8px;
+}
+
+
+.div-form textarea {
+    min-height: 120px;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+}
+
+span {
+    font-size: 14.4px;
+    color: #e4e4e4;
+    margin-left: 4px;
+}
+
+#submit {
+    font-size: 16px;
+    color: #f3f3f3;
+    background-color: #37af65;
+    width: 100%;
+    padding: 12px;
+    border-radius: 2px;
+    border: none;
+}
+
+@media (max-width: 460px) {
+    #survey-form {
+        margin: 50px 0 0 0;
+    }
+
+    #form-body {
+        padding: 40px 10px;
+    }
+}   

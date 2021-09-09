@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #0A0B0B;
+    z-index: 1;
+    line-height: 50px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.menu {
+    color: #fff;
+    position: fixed;
+    top: 17px;
+    left: 250px;
+    transition: color .5s;
+}
+
+.menu:hover {
+    color: #00F4FF;
+}
+
+.left h3 {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.left span {
+    color: #00F4FF;
+}
+
+.right {
+    line-height: 20px;
+    color: #fff;
+    background-color: #00F4FF;
+    text-decoration: none;
+    padding: 5px;
+    transition: background-color .5s;
+}
+
+.right:hover {
+    background-color: #67E0E6;
+}
+
+#check:checked ~ .navbar {
+    margin-left: -190px;
+}
+
+.navbar {
+    top: 0;
+    padding-top: 70px;
+    width: 250px;
+    height: 100%;
+    background-color: #2D3435;
+    position: fixed;
+    transition: margin-left .5s;
+}
+
+.navbar-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+center h4 {
+    color: #fff;
+}
+
+.navbar__link {
+    line-height: 50px;
+    display: block;
+    padding-left: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color .5s;
+    transition: padding-left .5s;
+}
+
+.navbar__link:hover {
+    background-color: #00F4FF;
+}
+
+.navbar__link i {
+    margin-right: 10px;
+}
+
+#check:checked ~ .navbar .navbar__link {
+    padding-left: 210px;
+}
+
+#check:checked ~ .navbar .navbar__link span {
+    display: none;
+}
+
+#check:checked ~ .content {
+    margin-left: 60px;
+}
+
+.content {
+    margin-left: 250px;
+    background: url(./tai-hinh-nen-dep-cho-may-tinh-min.jpg) no-repeat center / cover;
+    height: 100vh;
+    transition: margin-left .5s;
+}

@@ -1,0 +1,208 @@
+/* Biến CSS */
+:root {
+    --MauDo: red;
+}
+
+html, body {
+    margin: 0px;
+}
+
+.header {
+    background-color: rgb(42, 11, 214);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.header .btn {
+    align-self: center;
+    border: 2px solid #333;
+    padding: 10px;
+    /* background: linear-gradient(to right,black,red); */
+    animation: Test ease 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Test {
+    from {
+        border-color: black;
+    }
+    to {
+        border-color: red;
+    }
+}
+
+.Fixed {
+    width: 100%;
+    height: 30px;
+    background: #333;
+    position: fixed;
+    top: 0;
+}
+
+.Heading {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    /* padding: 10px;
+    box-sizing: border-box;
+    border: 10px dashed #333;
+    background-clip: content-box; */
+    /* background-image: linear-gradient(rgba(0,0,255,0), rgba(255,0,0,1)), url(https://nld.mediacdn.vn/2020/5/29/doi-hoa-tim-5-1590731334546464136746.jpg); */
+    /* background-size: 80%; */
+    padding: 10px;
+    border: 10px dashed #333;
+    /* background-repeat: no-repeat; */
+    box-sizing: border-box;
+    /* background-origin: content-box; */
+    /* Giá trị thứ nhất là chiều ngang, thứ 2 là chiều dọc */
+    /* background-position: center center; */
+    background: linear-gradient(0,rgba(255,255,255,0.5),rgba(0,0,255,0.5)), url(https://nld.mediacdn.vn/2020/5/29/doi-hoa-tim-5-1590731334546464136746.jpg) no-repeat top / cover;
+}
+
+h1::first-letter {
+    font-size: 40px;
+    color:blue;
+}
+
+th {
+    /* Biến cục bộ */
+    --MauXanh: green;
+    color: var(--MauXanh);
+    font-size: 16px;
+}
+
+th::selection {
+    background: rgb(171, 247, 156);
+    color: red;
+}
+
+#TH1 {
+    color:blueviolet;
+}
+
+.C1{
+    color:brown;
+}
+
+html {
+    font-size: 20px;
+}
+
+.box {
+    width: calc(50% + 20px);
+    height: 50px;
+    background-color: rgb(26, 199, 92);
+}
+
+/* .box:hover {
+    background: red;
+} */
+
+.box:active {
+    background: red;
+}
+
+.box::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 20px;
+    background: rgb(199, 26, 121);
+}
+
+.box::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: rgb(199, 26, 121);
+}
+
+a::after {
+    content: " (" attr(href) ")";
+}
+
+.Box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    /* Chuyển Box sang chiều ngang */
+    /* float: left; */
+}
+
+.Box1 {
+    background:rgb(26, 199, 92);
+    padding-top: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(171, 247, 156);
+    margin: 10px 20px 30px 40px;
+}
+
+.Box2 {
+    background:rgb(221, 16, 136);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 5px solid rgb(3,3,3);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.Box3 {
+    background:rgb(42, 11, 214);
+    padding: 5px;
+    border-top: 5px solid;
+}
+
+.Box4 {
+    border: 2px solid;
+    padding: 16px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+a {
+    color:red;
+    font-size: 25px;
+}
+
+a::after {
+    font-size: 20px;
+    color: rgb(68, 0, 255) !important;
+}
+
+.Cha {
+    width: 100%;
+    height: 200px;
+    background-color: aqua;
+    position: relative;
+}
+
+.Con {
+    width: 50px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    bottom: 0;
+}
+
+h1 {
+    /* !important có độ ưu tiên cao nhất, cao hơn inline */  
+    /* Gọi biến CSS */
+    color: var(--MauDo) !important;
+    font-size: 30px;
+    position: absolute;
+    top: 100px;
+}
+
+p {
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 30px;
+    bottom: 0;
+}

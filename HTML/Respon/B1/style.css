@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.main {
+    width: 1200px;
+    /* min-height: 100vh; */
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+}
+
+.icon-bars {
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    height: 100%;
+    display: none;
+    justify-content: flex-end;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.layout {
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.icon-close {
+    width: 16px;
+    margin: 16px 16px 16px auto;
+    cursor: pointer;
+}
+
+.nav__mobile {
+    background-color: #fff;
+    width: 300px;
+    height: 100%;
+    transform: translateX(300px);
+    transition: transform .3s linear;
+    /* display: none; */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#check:checked ~ .layout{
+    display: flex;
+    opacity: 1;
+}
+
+#check:checked + .nav__mobile{
+    transform: translateX(0);
+}
+
+.nav__list-mobile {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 16px;
+}
+
+.nav__link-mobile {
+    text-decoration: none;
+    padding: 16px 8px;
+    display: block;
+    color: #000;
+}
+
+/* Article */
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    margin-top: 48px;
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+}
+
+@media screen and (max-width: 740px) {
+    .nav {
+        justify-content: flex-end;
+    }
+
+    .nav__pc {
+        display: none;
+    }
+
+    .icon-bars {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav__mobile {
+        width: 100%;
+    }
+}

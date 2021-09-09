@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 62.5%;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+}
+
+/* Back to top */
+
+.backtotop {
+    border: 2px solid #58D68D;
+    position: fixed;
+    bottom: 30px;
+    cursor: pointer;
+    display: none;
+    transition: border .2s linear;
+}
+
+.backToTopIn {
+    animation: backToTopIn .5s linear forwards;
+}
+
+.backToTopOut {
+    animation: backToTopOut .5s linear;
+}
+
+@keyframes backToTopIn {
+    from {
+        opacity: 0;
+        right: -36px;
+        transform: scale(0.2);
+    }
+    to {
+        opacity: 1;
+        right: 30px;
+        transform: scale(1);
+    }
+}
+
+@keyframes backToTopOut {
+    from {
+        opacity: 1;
+        right: 30px;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        right: -36px;
+        transform: scale(0.2);
+    }
+}
+
+.border {
+    font-size: 1.6rem;
+    width: 32px;
+    height: 32px;
+    background-color: #58D68D;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    transition: background-color .2s linear;
+}
+
+.backtotop:hover {
+    border-color: #00F4FF;
+}
+
+.backtotop:hover .border {
+    background-color: #00F4FF;
+}
+
+/* Lịch */
+
+.mount {
+    flex: 1;
+    padding: 0 28px;
+    text-align: center;
+    position: relative;
+}
+
+.mount--present {
+}
+
+.mount-header {
+    color: #222!important;
+    font-size: 1.6rem!important;
+    line-height: 32px;
+    margin-bottom: 3px;
+}
+
+.mount-icon {
+    --height-width: 32px;
+    position: absolute;
+    top: 0;
+    color: #222;
+    line-height: var(--height-width);
+    width: var(--height-width);
+    height: var(--height-width);
+    border-radius: 50%;
+}
+
+.mount-icon:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.mount-icon--left {
+    left: 38px;
+}
+
+.mount-icon--right {
+    right: 38px;
+}
+
+.mount--next {
+
+}
+
+.mount-date {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mount-date li {
+    flex: calc(100% / 7);
+    display: inline-block;
+    padding: 15px;
+    color: #717171;
+    font-weight: 500;
+    border-radius: 50%;
+    line-height: 21px;
+}
+
+.mount-date--num li {
+    color: #222;
+    max-width: 51px;
+}
+
+.mount-date--num li:hover {
+    border: 1px solid #222;
+}
+
+.mount-date--num .mount-date--disable:hover,
+.mount-date--disable {
+    color: #d2d2d2 !important;
+    cursor: default;
+    border: none;
+}
