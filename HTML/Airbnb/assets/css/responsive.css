@@ -6,6 +6,15 @@
     .footer-origin__1 {
         justify-content: center;
     }
+
+    .content-list--overflow {
+        grid-template-columns: repeat(4, 33.33333%);
+    }
+
+    .item-place {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
 }
 
 /* Màn hình PC tầm trung */
@@ -13,9 +22,13 @@
     .content-list__btn {
         display: block;
     }
+
+    .content-list--overflow {
+        grid-template-columns: repeat(4, 33.33333%);
+    }
 }
 
-
+/* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
     .content-list__btn {
         display: block;
@@ -48,9 +61,23 @@
     .content-list__description {
         font-size: 1.5rem;
     }
+
+    .navbar__place--flexed {
+        margin-left: -160px;
+    }
 }
 
+
+/* Mobile */
 @media (max-width: 739px) {
+    .navbar--mobile {
+        display: flex;
+    }
+
+    .content-list--overflow {
+        grid-template-columns: repeat(4, 75%);
+    }
+
     .navbar {
         display: none;
     }
@@ -73,5 +100,39 @@
 
     .content-list h2 {
         font-size: 2rem;
+    }
+
+    .navbar-footer--mobile {
+        display: flex;
+    }
+
+    .item-place {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+
+    .content-list > .place-img {
+        padding: 50% 0 0 0;
+        background: #232323;
+    }
+
+    .content-list__info{
+        left: 40px;
+        right: 40px;
+        text-align: center;
+        top: 130px;
+        width: calc(100% - 80px);
+    }
+
+    .content-list__title {
+        font-size: 3rem;
+        text-align: center;
+        line-height: 3.2rem;
+    }
+
+    .content-list__more {
+        margin: 10px auto 0;
+        font-size: 1.4rem;
+        padding: 12px;
     }
 }

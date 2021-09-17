@@ -32,59 +32,59 @@
     padding-right: 0;
 }
 
-.mb-0 {
+.mbs-0 {
     display: none;
 }
 
-.mb-1 {
+.mbs-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
 }
 
-.mb-2 {
+.mbs-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
 }
 
-.mb-3 {
+.mbs-3 {
     flex: 0 0 25%;
     max-width: 25%;
 }
 
-.mb-4 {
+.mbs-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
 }
 
-.mb-6 {
+.mbs-6 {
     flex: 0 0 50%;
     max-width: 50%;
 }
 
-.mb-9 {
+.mbs-9 {
     flex: 0 0 75%;
     max-width: 75%;
 }
 
-.mb-12 {
+.mbs-12 {
     flex: 0 0 100%;
     max-width: 100%;
 }
 
 /* OFFSET */
-.mb-o-1 {
+.mbs-o-1 {
     margin-left: 8.33333%;
 }
 
-.mb-o-2 {
+.mbs-o-2 {
     margin-left: 16.66667%;
 }
 
-.mb-o-3 {
+.mbs-o-3 {
     margin-left: 25%;
 }
 
-.mb-o-4 {
+.mbs-o-4 {
     margin-left: 33.33333%;
 }
 
@@ -151,83 +151,83 @@
         padding-right: 5px;
     }
 
-    .pc-0 {
+    .tv-0 {
         display: none;
     }
     
-    .pc-1 {
+    .tv-1 {
         display: block;
         flex: 0 0 8.33333%;
         max-width: 8.33333%;
     }
     
-    .pc-2 {
+    .tv-2 {
         display: block;
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
     }
 
-    .pc-2p4 {
+    .tv-2p4 {
         display: block;
         flex: 0 0 20%;
         max-width: 20%;
     }
     
-    .pc-3 {
+    .tv-3 {
         display: block;
         flex: 0 0 25%;
         max-width: 25%;
     }
 
-    .pc-4 {
+    .tv-4 {
         display: block;
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
     }
 
-    .pc-5 {
+    .tv-5 {
         display: block;
         flex: 0 0 41.66667%;
         max-width: 41.66667%;
     }
     
-    .pc-6 {
+    .tv-6 {
         display: block;
         flex: 0 0 50%;
         max-width: 50%;
     }
 
-    .pc-7 {
+    .tv-7 {
         display: block;
         flex: 0 0 58.33333%;
         max-width: 58.33333%;
     }
 
-    .pc-9 {
+    .tv-9 {
         display: block;
         flex: 0 0 75%;
         max-width: 75%;
     }
 
-    .pc-10 {
+    .tv-10 {
         display: block;
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
     }
 
-    .pc-o-1 {
+    .tv-o-1 {
         margin-left: 8.33333%;
     }
     
-    .pc-o-2 {
+    .tv-o-2 {
         margin-left: 16.66667%;
     }
     
-    .pc-o-3 {
+    .tv-o-3 {
         margin-left: 25%;
     }
     
-    .pc-o-4 {
+    .tv-o-4 {
         margin-left: 33.33333%;
     }
 }
@@ -380,6 +380,12 @@
         max-width: 50%;
     }
 
+    .tl-8 {
+        display: block;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+
     .tl-12 {
         display: block;
         flex: 0 0 100%;
@@ -409,6 +415,85 @@
         margin-left: 4px;
         margin-right: 4px;
     }    
+}
+
+/* Mobile Tầm trung */
+@media (min-width: 320px) and (max-width: 739px) {
+    /* .wide {
+        width: 90%;
+    } */
+
+    .row {
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+
+    .col {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .tl-0 {
+        display: none;
+    }
+    
+    .mb-1 {
+        display: block;
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
+    }
+    
+    .mb-2 {
+        display: block;
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+    }
+    
+    .mb-3 {
+        display: block;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    
+    .mb-4 {
+        display: block;
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    .mb-6 {
+        display: block;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .mb-8 {
+        display: block;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    .mb-12 {
+        display: block;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .mb-o-1 {
+        margin-left: 8.33333%;
+    }
+    
+    .mb-o-2 {
+        margin-left: 16.66667%;
+    }
+    
+    .mb-o-3 {
+        margin-left: 25%;
+    }
+    
+    .mb-o-4 {
+        margin-left: 33.33333%;
+    }
 }
 
 /* @media (min-width: 740px) {

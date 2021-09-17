@@ -5,16 +5,21 @@
 }
 
 .grid.wide {
-    max-width: 1130px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -4px;
-    margin-right: -4px;
+    margin-left: -12px;
+    margin-right: -12px;
     /* width: 100%; */
+}
+
+.row.no-gutter--row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .row.no-gutter {
@@ -23,8 +28,8 @@
 }
 
 .col {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .row.no-gutter .col {
@@ -64,16 +69,6 @@
 .mb-9 {
     flex: 0 0 75%;
     max-width: 75%;
-}
-
-.mb-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
-}
-
-.mb-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
 }
 
 .mb-12 {
@@ -152,74 +147,92 @@
 /* Màn hình cỡ lớn */
 @media (min-width: 1240px) {
     .row {
-        margin-left: -8px;
-        margin-right: -8px;
+        margin-left: -12px;
+        margin-right: -12px;
     }
 
     .col {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
-    .tv-0 {
+    .pc-0 {
         display: none;
     }
     
-    .tv-1 {
+    .pc-1 {
         display: block;
         flex: 0 0 8.33333%;
         max-width: 8.33333%;
     }
     
-    .tv-2 {
+    .pc-2 {
         display: block;
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
     }
     
-    .tv-3 {
+    .pc-3 {
         display: block;
         flex: 0 0 25%;
         max-width: 25%;
     }
 
-    .tv-4 {
+    .pc-4 {
         display: block;
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
     }
+
+    .pc-5 {
+        display: block;
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
     
-    .tv-6 {
+    .pc-6 {
         display: block;
         flex: 0 0 50%;
         max-width: 50%;
     }
 
-    .tv-9{
+    .pc-8 {
+        display: block;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    .pc-9{
         display: block;
         flex: 0 0 75%;
         max-width: 75%;
     }
 
-    .tv-12 {
+    .pc-10 {
+        display: block;
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+
+    .pc-12 {
         display: block;
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-    .tv-o-1 {
+    .pc-o-1 {
         margin-left: 8.33333%;
     }
     
-    .tv-o-2 {
+    .pc-o-2 {
         margin-left: 16.66667%;
     }
     
-    .tv-o-3 {
+    .pc-o-3 {
         margin-left: 25%;
     }
     
-    .tv-o-4 {
+    .pc-o-4 {
         margin-left: 33.33333%;
     }
 }
@@ -228,21 +241,21 @@
 /* Màn hình PC tầm trung */
 @media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
-        width: 927px;
+        width: 984px;
     }
 
     .row {
-        margin-left: -8px;
-        margin-right: -8px;
+        margin-left: -12px;
+        margin-right: -12px;
     }
 
     .col {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .pc-0 {
-        display: none !important;
+        display: none;
     }
     
     .pc-1 {
@@ -269,10 +282,22 @@
         max-width: 33.33333%;
     }
 
+    .pc-5 {
+        display: block;
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
+
     .pc-6 {
         display: block;
         flex: 0 0 50%;
         max-width: 50%;
+    }
+
+    .pc-8 {
+        display: block;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
     }
 
     .pc-9{
@@ -281,7 +306,7 @@
         max-width: 75%;
     }
 
-    .pc-12{
+    .pc-12 {
         display: block;
         flex: 0 0 100%;
         max-width: 100%;
@@ -307,21 +332,21 @@
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
     .wide {
-        width: 700px;
+        width: 644px;
     }
 
     .row {
-        margin-left: -6px;
-        margin-right: -6px;
+        margin-left: -8px;
+        margin-right: -8px;
     }
 
     .col {
-        padding-left: 6px;
-        padding-right: 6px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .tl-0 {
-        display: none !important;
+        display: none;
     }
     
     .tl-1 {
@@ -346,6 +371,18 @@
         display: block;
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
+    }
+    
+    .tl-5 {
+        display: block;
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
+    
+    .tl-5p5 {
+        display: block;
+        flex: 0 0 45.83333%;
+        max-width: 45.83333%;
     }
 
     .tl-6 {
@@ -379,13 +416,9 @@
 
 /* Mobile */
 @media (max-width: 739px) {
-    .wide {
-        width: 90%;
-    }
-
     .grid.wide > .row {
-        margin-left: 4px;
-        margin-right: 4px;
+        margin-left: 12px;
+        margin-right: 12px;
     }    
 }
 

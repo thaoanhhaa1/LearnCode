@@ -1,12 +1,19 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --text-color: rgb(66, 66, 66);
+    --text-color: #424242;
     --primary-color: #ee4d2d;
+    --border-color: #ddd;
+    --e8-border-color: #e8e8e8;
+    --f5-background-color: #f5f5f5;
+    --rgba-background-color: rgba(255, 216, 64,.94);
+    --C75-color: #757575;
+    --C54-color: #545454;
 
     --header-height: 120px;
     --navbar-height: 34px;
     --navbody-height: calc(var(--header-height) - var(--navbar-height));
+    --height-sort-bar: 48px;
 }
 
 * {
@@ -203,7 +210,7 @@ p {
 
 .inner__footer {
     padding: 12px 32px;
-    background-color: #f5f5f5;
+    background-color: var(--f5-background-color);
     display: flex;
     font-size: 1.2rem;
 }

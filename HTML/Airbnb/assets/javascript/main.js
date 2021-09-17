@@ -1,7 +1,6 @@
 const userMenu = document.querySelector('.user-item--menu')
 const userMenuIO = document.querySelector('.user-item__menu')
 const main = document.querySelector('.main')
-const backToTop = document.querySelector('.backtotop')
 const navTimes = document.querySelectorAll('.nav-time')
 const navTimeBig = document.querySelector('.nav-time-big')
 const placeItems = document.querySelectorAll('.place-item')
@@ -49,35 +48,18 @@ window.addEventListener('scroll',function() {
         this.document.querySelector('.navbar-conteiner').classList.add('navbar-conteiner--scroll')
         this.document.querySelector('.navbar__place').classList.add('navbar__place--scroll')
 
-        backToTop.style.display = "block"
-        backToTop.classList.remove('backToTopOut')
-        backToTop.classList.add('backToTopIn')
-
         this.document.querySelector('.navbar__place--no-flexed').classList.add('navbar__place--no-flexed--scroll')
     }
     else{
-
         setTimeout(function(){
             navTimeBig.style.display = "flex";
         },100)
         this.document.querySelector('.navbar-conteiner').classList.remove('navbar-conteiner--scroll')
         this.document.querySelector('.navbar__place').classList.remove('navbar__place--scroll')
 
-        if (backToTop.classList.contains('backToTopIn') == true){
-            backToTop.classList.remove('backToTopIn')
-            backToTop.classList.add('backToTopOut')
-            setTimeout(function(){
-                backToTop.style.display = "none"
-            },490)
-        }
-
         this.document.querySelector('.navbar__place--no-flexed').classList.remove('navbar__place--no-flexed--scroll')
 
     }
-})
-
-backToTop.addEventListener('click',function(){
-    window.scrollTo(0,0)
 })
 
 document.querySelector('.navbar__place--flexed').addEventListener('click', function(event) {
@@ -204,3 +186,11 @@ for (let num = 0; num < changeNumber.length; num++){
                 subNumber[num].classList.add('sub-number--disable')
     })    
 }   
+
+// Navbar Search Mobile
+const searchMobile = document.querySelector('.navbar--mobile');
+const searchMenuMobile = document.querySelector('.navbar-search--mobile')
+
+searchMobile.addEventListener('click', (event) => {
+    searchMenuMobile.style.display = 'block';
+});
